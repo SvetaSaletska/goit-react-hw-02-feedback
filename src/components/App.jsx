@@ -1,12 +1,23 @@
-import Feedback from './compo'
-import { Component } from 'react'
+import React, { Component } from 'react';
+import { Feedback } from './Feedback/Feedback';
 
 
-export const App = () => {
+
+
+class App extends Component {
+
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0
+  }
+render() {
+  const { good, bad, neutral } = this.state;
+}
   return (
-    <div>
-     <Feedback/>;
-    </div>
+   <div className= {css.container}> 
+   <Feedback/>
+   </div>
   );
 };
 

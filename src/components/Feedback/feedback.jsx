@@ -1,12 +1,8 @@
 import { Component } from 'react';
+import css from '../Feedback/Feedback.module.css'
 
+ export class Feedback extends Component {
 
-class Feedback extends Component {
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0
-  }
 
   render() {
  return (
@@ -19,9 +15,9 @@ class Feedback extends Component {
       <button className = {css.btn}>Bad</button>
     </div>
     <p className = {css.statistic}>Statistic</p>
-    <span className = {css.result}>Good</span>
-    <span className = {css.result}>Neutral</span>
-    <span className = {css.result}>Bad</span>
+    <span className = {css.result}>Good:</span>
+    <span className = {css.result}>Neutral:</span>
+    <span className = {css.result}>Bad:</span>
 
   </div>
  )
