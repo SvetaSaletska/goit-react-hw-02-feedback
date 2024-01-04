@@ -1,7 +1,9 @@
-import { Component } from 'react';
-import css from '../Feedback/Feedback.module.css'
+import React from 'react';
+import css from '../FeedbackOptions/FeedbackOptions.module.css'
+import PropTypes from 'prop-types';
 
-const Feedback = ({ options, onLeaveFeedback }) => {
+
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
       <div className={css.buttonsContainer}>
           {options.map(option => (
@@ -31,20 +33,23 @@ const Feedback = ({ options, onLeaveFeedback }) => {
 //       <button className = {css.btn }>Good</button>
 //       <button className = {css.btn }>Neutral</button>
 //       <button className = {css.btn }>Bad</button>
-//     </div>
-//     <p className = {css.statistic}>Statistic</p>
-//     <span className = {css.result}>Good:</span>
-//     <span className = {css.result}>Neutral:</span>
-//     <span className = {css.result}>Bad:</span>
+  //   </div>
+  //   <p className = {css.statistic}>Statistic</p>
+  //   <span className = {css.result}>Good:</span>
+  //   <span className = {css.result}>Neutral:</span>
+  //   <span className = {css.result}>Bad:</span>
 
-//   </div>
+  // </div>
 //  )
 //   }
 
 // }
 
 
+FeedbackOptions.propTypes = {
+  options: PropTypes.array,
+  onLeaveFeedback: PropTypes.func,
+}
 
 
-
-export default Feedback
+export default FeedbackOptions
